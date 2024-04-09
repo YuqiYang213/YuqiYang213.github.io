@@ -1,0 +1,96 @@
+---
+layout: home
+profile_picture:
+  src: /assets/img/yuqiyang.png
+  alt: website picture
+items:
+- title: Multi-Task Dense Prediction via Mixture of Low-Rank Experts
+    src: /assets/img/work/mlore_pipeline.png
+    alt: arxiv
+  author: <b>Yuqi Yang</b>, Peng-Tao Jiang, Qibin Hou, Hao Zhang, Jinwei Chen, Bo Li
+  pubname: IEEE Computer Vision and Pattern Recognition (CVPR)
+  code: https://github.com/YuqiYang213/MLoRE
+  paper: https://arxiv.org/abs/2403.17749
+  bibtex:
+- title: Traffic Scene Parsing through the TSP6K Dataset:
+    src: /assets/img/work/tsp_pipeline.png
+    alt: arxiv
+  author: Peng-Tao Jiang*, <b>Yuqi Yang*</b>, Yang Cao, Qibin Hou, Ming-Ming Cheng, Chunhua Shen
+  pubname: IEEE Computer Vision and Pattern Recognition (CVPR)
+  code: https://github.com/PengtaoJiang/TSP6K
+  paper: https://arxiv.org/abs/2303.02835
+  bibtex:
+- title: L2G&#58; A Simple Local-to-Global Knowledge Transfer Framework for Weakly Supervised Semantic Segmentation
+    src: /assets/img/work/l2g_pipeline.png
+    alt: arxiv
+  author: Peng-Tao Jiang, <b>Yuqi Yang</b>, Qibin Hou, Yunchao Wei
+  pubname: IEEE Computer Vision and Pattern Recognition (CVPR)
+  code: https://github.com/PengtaoJiang/L2G
+  paper: https://arxiv.org/abs/2204.03206
+  bibtex:
+- title: CorrMatch&#58; Label Propagation via Correlation Matching for Semi-Supervised Semantic Segmentation
+  image:
+    src: /assets/img/work/corrmatch_pipeline.png
+    alt: arxiv
+  author: Boyuan Sun, <b>Yuqi Yang</b>, Weifeng Yuan, Le Zhang, Ming-Ming Cheng, Qibin Hou
+  pubname: IEEE Computer Vision and Pattern Recognition (CVPR)
+  code: https://github.com/BBBBchan/CorrMatch
+  paper: https://arxiv.org/abs/2306.04300
+  bibtex:
+---
+
+
+<p>
+  Yuqi Yang (杨雨奇) is currently pursuing a master degree at Nankai University,
+  supervised by Prof. <a href="https://houqb.github.io/">Qibin Hou</a> and Prof. <a href="https://mmcheng.net/cmm">Ming-Ming Cheng</a>. 
+  He received his bachelor's degree from the School of Computer Science and Technology at Nankai University in 2022. 
+  His research interests include computer vision and deep learning, particularly focusing on semantic segmentation and multi-task learning, <i>etc</i>.
+</p>
+
+
+<p>
+  <i class="fa-solid fa-location-dot"></i> Tianjin, China
+  <br/>
+  <i class="fa-solid fa-envelope"></i>  yangyq2000@mail<i class="fa-solid fa-at"></i> nankai.edu.cn
+  <br/>
+  <a href="https://github.com/YuqiYang213"> <i class="fa-brands fa-github"></i> Github</a>
+</p>
+
+<div id="publication">
+  <h1 class="page-heading">Selected Publications</h1>
+    ( * equal contribution)
+    <br/>
+    <table>
+    {% for item in page.items %}
+      <tr>
+        <td width="35%">
+          <img
+          style="width: 200px"
+          src="{{ item.image.src | absolute_url }}"
+          alt="{{ item.image.alt }}"
+          />
+        </td>
+        <td width="65%">
+          <paper-title> {{ item.title }} </paper-title>
+          <br/>
+          <paper-info>
+            {{ item.author }}
+            <br/>
+            <em>{{ item.pubname }}</em>
+            <br/>
+            {% if item.paper and item.paper != "" and item.paper != nil %}
+              [<a href="{{ item.paper }}">Paper</a>]
+            {% else %}
+              [Paper (Coming soon)]
+            {% endif %}
+            {% if item.code and item.code != "" and item.code != nil %}
+              [<a href="{{ item.code }}">Code</a>]
+            {% else %}
+              [Code]
+            {% endif %}
+          </paper-info>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
